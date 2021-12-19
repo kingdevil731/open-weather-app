@@ -7,14 +7,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - [Introduction](#introduction)
 - [Prerequisites](#prerequisites)
 - [Local development](#local-development)
-- [Write Your Own Google Cloud Functions](#write-your-own-google-cloud-functions)
-- [Deploy to Firebase](#deploy-to-firebase)
-- [Webpack, Reactjs and TypeScript](#webpack-reactjs-and-typescript)
-- [TypeScript, Eslint and Prettier](#typescript-eslint-and-prettier)
-- [Ant Design](#ant-design)
-- [ECharts](#echarts)
-- [Windy API](#windy-api)
-- [Mapbox](#mapbox)
 
 ## Introduction
 
