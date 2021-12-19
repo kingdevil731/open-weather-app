@@ -1,25 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {
+  BrowserRouter as Router,
+  Navigate,
+  Route,
+  Routes,
+} from 'react-router-dom';
+import StepOne from './components/setupSteps/StepOne';
+import StepTwo from './components/setupSteps/StepTwo';
+import MainApp from './pages/MainApp';
+import Welcome from './pages/Welcome';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+        <Routes>
+          <Route path='/' element={<Navigate replace to='/welcome' />} />
+          <Route path='/welcome' element={<Welcome />} />
+          <Route path='/welcome/step1' element={<StepOne />} />
+          <Route path='/welcome/step2' element={<StepTwo />} />
+          <Route path='/app' element={<MainApp />} />
+        </Routes>
+      </Router>
+    </>
   );
 }
 
