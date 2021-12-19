@@ -15,7 +15,7 @@ const StepTwo = () => {
     theme.colorScheme === 'dark' ? theme.colors.dark[1] : theme.colors.gray[7];
 
   const handleContinueButtonClick = () => {
-    if (localStorage.getItem('measureSystem') === null || undefined) {
+    if (localStorage.getItem('measurementSystem') === null || undefined) {
       notifications.showNotification({
         title: 'Error',
         message: 'Please select a measurement system',
