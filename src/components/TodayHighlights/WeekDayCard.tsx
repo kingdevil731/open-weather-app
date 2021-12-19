@@ -17,6 +17,7 @@ const WeekDayCard = ({
   min_temp,
 }: weekDayProps) => {
   const weekDay = getWeekDayShort(dayOfWeek);
+  const measureSystem = localStorage.getItem('measureSystem');
   return (
     <Paper radius='lg' padding='sm'>
       <Container style={{ fontSize: '0.8rem', textAlign: 'center' }}>
@@ -24,7 +25,9 @@ const WeekDayCard = ({
         {getWeatherIcons(weatherId, '35')}
         <Text>
           {max_temp.toPrecision(2)}°{` `}
-          <span style={{ color: 'gray' }}>{min_temp.toPrecision(2)}°</span>
+          <span style={{ color: 'gray' }}>{`${min_temp.toPrecision(2)}°${
+            measureSystem === 'metric' ? 'C' : 'F'
+          }`}</span>
         </Text>
       </Container>
     </Paper>

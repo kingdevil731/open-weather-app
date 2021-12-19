@@ -17,7 +17,7 @@ import {
   setCity,
   setIsProcessing,
 } from '../../redux/appSlice';
-import { getGeoCode } from '../../services/api';
+import { getCityByGeoCode } from '../../services/api';
 import { LocationIcon } from '../Icons';
 
 const StepOne = () => {
@@ -62,7 +62,7 @@ const StepOne = () => {
   };
 
   const getLocation = (lat: string, lon: string, key: string) => {
-    axios.get(getGeoCode(lat, lon)).then((res) => {
+    axios.get(getCityByGeoCode(lat, lon, key)).then((res) => {
       // set city name returned by the API
       dispatch(setCity(res.data.results[0].components.city));
       dispatch(setIsProcessing(false));
