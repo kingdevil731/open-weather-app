@@ -77,7 +77,7 @@ const StepOne = () => {
 
         axios
           .get(
-            `https://api.opencagedata.com/geocode/v1/json?q=${city}&key=${process.env.REACT_APP_NOTGEOAPI}`,
+            `https://api.opencagedata.com/geocode/v1/json?q=${currentCity}&key=${process.env.REACT_APP_NOTGEOAPI}`,
           )
           .then((res) => {
             // set lat and long in local storage for later use
